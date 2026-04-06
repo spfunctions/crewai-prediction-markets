@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crewai-prediction-markets"
+version = "0.1.0"
+description = "CrewAI tools for prediction market data. Give your AI crew real-time world awareness from 30,000+ markets."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "SimpleFunctions", email = "hello@simplefunctions.dev" }]
+keywords = ["crewai","prediction-markets","ai-agents","tools","python","kalshi","polymarket","world-state","crew","multi-agent"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["requests>=2.28.0"]
+
+[project.urls]
+Homepage = "https://simplefunctions.dev"
+Repository = "https://github.com/spfunctions/crewai-prediction-markets"
+
+[tool.hatch.build.targets.wheel]
+packages = ["crewai_prediction_markets"]

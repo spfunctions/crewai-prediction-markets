@@ -1,15 +1,31 @@
 from crewai_prediction_markets.tools import (
+    GetContextTool,
     GetWorldStateTool,
-    GetUncertaintyIndexTool,
+    GetWorldChangesTool,
     GetMarketEdgesTool,
-    GetMarketDetailTool,
+    GetUncertaintyIndexTool,
+    GetIdeasTool,
 )
 
+
 def prediction_market_tools():
-    return [GetWorldStateTool(), GetUncertaintyIndexTool(), GetMarketEdgesTool(), GetMarketDetailTool()]
+    """Return all six prediction-market tools as a list, in stable order."""
+    return [
+        GetContextTool(),
+        GetWorldStateTool(),
+        GetWorldChangesTool(),
+        GetMarketEdgesTool(),
+        GetUncertaintyIndexTool(),
+        GetIdeasTool(),
+    ]
+
 
 __all__ = [
-    "GetWorldStateTool", "GetUncertaintyIndexTool",
-    "GetMarketEdgesTool", "GetMarketDetailTool",
+    "GetContextTool",
+    "GetWorldStateTool",
+    "GetWorldChangesTool",
+    "GetMarketEdgesTool",
+    "GetUncertaintyIndexTool",
+    "GetIdeasTool",
     "prediction_market_tools",
 ]
